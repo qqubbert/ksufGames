@@ -38,6 +38,7 @@
       "@icons/*": ["shared/assets/icons/*"],
       "@fonts/*": ["shared/assets/fonts/*"],
       "@config/*": ["shared/config/*"],
+      "@styles/*": ["shared/config/Styles/*"],
     }
   },
   "include": ["src"]

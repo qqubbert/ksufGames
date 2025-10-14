@@ -1,7 +1,9 @@
 import { useState, type FC } from "react"
 
-import { Roulette } from "@widgets/Roulette/Roulette"
 import type { RouletteSectionType } from "@entities/RouletteSection/RouletteSection"
+
+import { Roulette } from "@widgets/Roulette/Roulette"
+import { Button } from "@shared/Button/Button"
 
 export const RoulettePage: FC = () => {
   const [items, setItems] = useState<RouletteSectionType[]>([
@@ -47,6 +49,7 @@ export const RoulettePage: FC = () => {
   return (
     <>
       <Roulette items={items}/>
+      <Button title="Spin"/>
     </>
   )
 }

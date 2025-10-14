@@ -12,6 +12,8 @@ export const GamesList: FC<GamesListProps> = ({ gamesList }) => {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
+    width: 100%;
+    padding: 0 20px;
   `
   
   return (

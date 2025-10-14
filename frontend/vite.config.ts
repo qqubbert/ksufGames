@@ -16,6 +16,7 @@ export default defineConfig({
         "@images": "/src/shared/assets/images",
         "@icons": "/src/shared/assets/icons",
         "@fonts": "/src/shared/assets/fonts",
+        "@styles": "/src/shared/config/Styles",
         "@config": "/src/shared/config"
     },
   },

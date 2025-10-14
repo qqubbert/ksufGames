@@ -24,6 +24,18 @@
     // Some stricter flags (disabled by default)
     "noUnusedLocals": false,
     "noUnusedParameters": false,
-    "noPropertyAccessFromIndexSignature": false
+    "noPropertyAccessFromIndexSignature": false,
+
+    "baseUrl": "./src",
+    "paths": {
+      "@config": ["/config"],
+      "@models": ["/model"],
+      "@types": ["/config/types"],
+      "@routes": ["/routes"],
+      "@controllers": ["/controllers"],
+      "@middleware": ["/middleware"],
+      "@services": ["/services"],
+      "@utils": ["/utils"],
+    }
   }
 }
