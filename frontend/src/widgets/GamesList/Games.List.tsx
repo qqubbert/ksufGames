@@ -5,9 +5,10 @@ import { Game, type GameProps } from "@entities/Game/Game";
 
 type GamesListProps = {
   gamesList: GameProps[]
+  isLoading: boolean
 }
 
-export const GamesList: FC<GamesListProps> = ({ gamesList }) => {
+export const GamesList: FC<GamesListProps> = ({ gamesList, isLoading }) => {
   const GamesListContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -19,9 +20,13 @@ export const GamesList: FC<GamesListProps> = ({ gamesList }) => {
   return (
     <>
     <GamesListContainer>
-      {gamesList.map((game, index) => (
-        <Game key={index} {...game} />
-      ))}
+      {isLoading ? (
+        <p>Loading...</p>
+      ) : (
+        gamesList.map((game, index) => (
+          <Game key={index} {...game} />
+        ))
+      )}
     </GamesListContainer>
     </>
   )
