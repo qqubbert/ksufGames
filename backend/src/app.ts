@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import { setupRoutes } from "./routes";
 import cors from "cors";
 import { appConfig } from "config/appConfig";
+import path from "path";
 
 dotenv.config();
 
@@ -14,6 +15,7 @@ app.use(cors({
 }));
 
 setupRoutes(app);
+app.use("/files", express.static(path.resolve(__dirname, "../files")));
 
 const PORT = appConfig.PORT || 8000; 
 

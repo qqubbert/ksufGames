@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { sizes } from "./Sizes";
 
 export const PageStyled = styled.div`
   display: flex;
@@ -9,4 +10,5 @@ export const PageStyled = styled.div`
   min-width: 100%;
   padding: 20px;
   gap: 20px;
+  margin-top: ${sizes.headerHeight};
 `

@@ -4,9 +4,10 @@ import type { RouletteSectionType } from "@entities/RouletteSection/RouletteSect
 
 import { Roulette } from "@widgets/Roulette/Roulette"
 import { Button } from "@shared/Button/Button"
+import { PageStyled } from "@shared/config/Styles/PageStyled"
 
 export const RoulettePage: FC = () => {
-  const [items, setItems] = useState<RouletteSectionType[]>([
+  const [items] = useState<RouletteSectionType[]>([
     { text: '0', bgColor: '#50dd50' },
     { text: '32', bgColor: '#dd5050' },
     { text: '15', bgColor: '#333333' },
@@ -48,8 +49,10 @@ export const RoulettePage: FC = () => {
 
   return (
     <>
-      <Roulette items={items}/>
-      <Button title="Spin"/>
+      <PageStyled>
+        <Roulette items={items}/>
+        <Button title="Spin"/>
+      </PageStyled>
     </>
   )
 }
